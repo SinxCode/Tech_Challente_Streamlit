@@ -28,7 +28,7 @@ st.write("""
 st.subheader("Insira o Preço do Dia Anterior")
 
 # Campo para entrada do preço anterior
-preco_passado = st.number_input("Preço do Petróleo no Dia Anterior", min_value=0.0, value=7500.0)
+preco_passado = float(st.number_input("Preço do Petróleo no Dia Anterior", min_value=0.0, value=75.00))
 
 # Quando o usuário clicar no botão de previsão
 if st.button("Prever Preço"):
