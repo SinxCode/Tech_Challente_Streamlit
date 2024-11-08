@@ -18,7 +18,7 @@ def fazer_previsao(preco_passado):
     return predicao[0]
 
 
-st.title("Previsão de Preço do Petróleo - RandomForest")
+st.title("Tech Challenge - Previsão de Preço do Petróleo - RandomForest")
 
 st.write("""
     Este aplicativo prevê o preço do petróleo no dia seguinte com base no preço do dia anterior.
