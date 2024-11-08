@@ -37,3 +37,4 @@ if st.button("Prever Preço"):
     # Exibição do gráfico
     st.subheader("Gráfico da Previsão")
     st.line_chart([preco_passado, previsao])
+    
