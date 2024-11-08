@@ -2,13 +2,17 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Carregar o modelo RandomForest treinado
+st.set_page_config(page_title="Previsão de Preço do Petróleo", page_icon="💡", layout="centered", initial_sidebar_state="auto")
+
+# Carregando modelo
 model = joblib.load('modelo_randomforest.pkl')
 
 # Função para fazer previsões com o modelo
 def fazer_previsao(preco_passado):
+
     # Converter a entrada em um formato compatível com o modelo
     input_data = np.array([[preco_passado]])
+
     # Fazer a previsão usando o modelo carregado
     predicao = model.predict(input_data)
     return predicao[0]
@@ -21,7 +25,6 @@ st.write("""
     Insira o preço do dia anterior para obter a previsão do preço.
 """)
 
-# Entrada de dados para previsão
 st.subheader("Insira o Preço do Dia Anterior")
 
 # Campo para entrada do preço anterior
